@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* Highlight pending bookings */
+.pending-row {
+    background: linear-gradient(90deg, #fff3cd, #ffeeba) !important;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px rgba(255,193,7,0.4); }
+    50% { box-shadow: 0 0 15px rgba(255,193,7,0.9); }
+    100% { box-shadow: 0 0 5px rgba(255,193,7,0.4); }
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #333;
+}
+
+h2 {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+p {
+    color: #f1f1f1;
+    font-size: 16px;
+}
+
+table {
+    margin-top: 30px;
+    border-collapse: collapse;
+    width: 90%;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+th {
+    background: linear-gradient(90deg, #ff7a18, #ffb347);
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+tr:nth-child(even) {
+    background: #f8f9ff;
+}
+
+tr:hover {
+    background: #eef1ff;
+    transform: scale(1.01);
+    transition: 0.2s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a[href*="ACCEPTED"] {
+    background: #28a745;
+    color: white;
+}
+
+a[href*="ACCEPTED"]:hover {
+    background: #1e7e34;
+}
+
+a[href*="REJECTED"] {
+    background: #dc3545;
+    color: white;
+}
+
+a[href*="REJECTED"]:hover {
+    background: #a71d2a;
+}
+
+.no-action {
+    color: #888;
+    font-style: italic;
+    font-weight: bold;
+}
